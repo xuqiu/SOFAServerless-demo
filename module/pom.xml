@@ -21,32 +21,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
     <build>
         <plugins>
-            <!--这里添加ark 打包插件-->
-            <plugin>
-                <groupId>com.alipay.sofa</groupId>
-                <artifactId>sofa-ark-maven-plugin</artifactId>
-                <version>2.2.3</version>
-                <executions>
-                    <execution>
-                        <id>default-cli</id>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <skipArkExecutable>true</skipArkExecutable>
-                    <outputDirectory>./target</outputDirectory>
-                    <bizName>dynamic-provider</bizName>
-                    <webContextPath>provider</webContextPath>
-                    <declaredMode>true</declaredMode>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 </project>
